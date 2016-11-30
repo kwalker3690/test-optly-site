@@ -15,14 +15,14 @@
 
     ga('create', 'UA-88243155-1', 'auto');
     ga('send', 'pageview');
-    ga('send', 'kelly_custom_event')
+    ga('send', 'event', 'kelly_custom_pageload_event', 'loaded')
 
   </script>
 </head>
 <body>
 Github pages by kdubz
 
-<button onclick="ga('send', 'kelly_click_event')">Click me</button>
+<button onclick="ga('send', 'event', 'kelly_click_event', 'clicked')">Click me</button>
 
 </body>
 </html>
