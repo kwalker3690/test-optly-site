@@ -137,18 +137,18 @@ var mySendCampaignData = function(campaignState) {
        */
       var registerCurrentlyActiveCampaigns = function() {
         window['optimizely'] = window['optimizely'] || [];
-        var state = window['optimizely'].get && window['optimizely'].get('state');
-        if (state) {
-          checkReferrer();
-          var activeCampaigns = state.getCampaignStates({
-            isActive: true,
-          });
-          for (var id in activeCampaigns) {
-            if ({}.hasOwnProperty.call(activeCampaigns, id)) {
-              newActiveCampaign(id);
-            }
-          }
-        } else {
+        // var state = window['optimizely'].get && window['optimizely'].get('state');
+        // if (state) {
+        //   checkReferrer();
+        //   var activeCampaigns = state.getCampaignStates({
+        //     isActive: true,
+        //   });
+        //   for (var id in activeCampaigns) {
+        //     if ({}.hasOwnProperty.call(activeCampaigns, id)) {
+        //       newActiveCampaign(id);
+        //     }
+        //   }
+        // } else {
           window['optimizely'].push({
             type: 'addListener',
             filter: {
@@ -159,7 +159,7 @@ var mySendCampaignData = function(campaignState) {
               checkReferrer();
             },
           });
-        }
+        // }
       };
       registerCurrentlyActiveCampaigns();
       registerFutureActiveCampaigns();
