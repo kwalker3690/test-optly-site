@@ -32,17 +32,17 @@ var utag_data = {
 
 </script>
 <script type="text/javascript">
-var jqxhr = $.get( "https://app.crazyegg.com/api/v2/status.json", function(s) {
-  alert( "success",s );
+$.get( "https://app.crazyegg.com/api/v2/status.json", function(s) {
+  console.log( "success",s );
 })
   .done(function() {
-    alert( "second success" );
+    console.log( "second success" );
   })
   .fail(function(e) {
-    alert( "error", e);
+    console.log( "error", e);
   })
   .always(function() {
-    alert( "finished" );
+    console.log( "finished" );
   });
 </script>
 </head>
